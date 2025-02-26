@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Все рассказы RandomStory{% endblock %}
+
+{% block content %}
+  <h1 class="text-center mb-4">RandomStory: короткие рассказы</h1>
+  {% for story in stories %}
+    <div class="card mb-3 card-body">
+      <h5 class=card-title>{{ story.title }}</h5>
+      <p class=card-text>{{ story.text }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
