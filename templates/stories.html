@@ -6,8 +6,8 @@
   {% for story in stories %}
     <div class="card mb-3">
       <div class="card-body">
-        <h5 class=card-title>{{ story.title }}</h5>
-        <p class=card-text>{{ story.text }}</p>
+        <h5 class="card-title">{{ story.title }}</h5>
+        <p class="card-text">{{ story.text | replace('\n', '<br>') | safe }}</p>
       </div>
     </div>
   {% endfor %}
