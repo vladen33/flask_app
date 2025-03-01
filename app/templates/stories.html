@@ -5,10 +5,10 @@
   <h1 class="text-center mb-4">RandomStory: короткие рассказы</h1>
   {% for story in stories %}
     <div class="card mb-3">
-      <div class="card-body">
-        <h5 class="card-title">{{ story.title }}</h5>
-        <p class="card-text">{{ story.text | replace('\n', '<br>') | safe }}</p>
+    <div class="card-body">
+      <h5 class="card-title">{{ story.title }}</h5>
+      <p class="card-text">{{ story.text }}</p>
       </div>
-    </div>
-  {% endfor %}
+  </div>
+{% endfor %}
 {% endblock %}

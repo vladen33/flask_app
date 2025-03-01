@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Добавить рассказ{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <h1>Опубликовать рассказ</h1>
+        <div class="col-12 my-5">
+            <form method="post" novalidate>
+                {{ form.csrf_token }}
+                {{ form.title(class="form-control") }}<br />
+                {{ form.text(class="form-control") }}<br />
+                {{ form.submit(class="btn btn-primary") }}
+            </form>
+        </div>
+    </div>
+{% endblock %}
